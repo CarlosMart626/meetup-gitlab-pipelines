@@ -10,8 +10,8 @@ environments = {
         'hosts': os.environ['PRODUCTION_LOGIN'],
         'home': '/var/meetup',
         'docker_commands': [
-            'docker rm -f $(docker ps -aq)',
-            'docker rmi -f $(docker images -aq)',
+            'docker-compose build --no-cache',
+            'docker-compose down',
             'docker volume rm $(docker volume ls -qf dangling=true)',
             'docker-compose -f production.yml up -d',
         ],
@@ -24,8 +24,8 @@ environments = {
         'hosts': os.environ['BETA_LOGIN'],
         'home': '/var/meetup',
         'docker_commands': [
-            'docker rm -f $(docker ps -aq)',
-            'docker rmi -f $(docker images -aq)',
+            'docker-compose build --no-cache',
+            'docker-compose down',
             'docker volume rm $(docker volume ls -qf dangling=true)',
             'docker-compose -f production.yml up -d',
         ],
