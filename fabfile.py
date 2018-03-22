@@ -31,7 +31,7 @@ environments = {
         ],
         'git': {
             'parent': 'origin',
-            'branch': 'develop',
+            'branch': 'master',
         },
     }
 }

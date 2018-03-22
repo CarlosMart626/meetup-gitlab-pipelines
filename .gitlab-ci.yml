@@ -62,7 +62,6 @@ beta:
     name: beta
     url: https://meetup.carlosmart.co
   only:
-    - develop
     - master
 
 integration_tests:
