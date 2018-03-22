@@ -1,0 +1,17 @@
+version: '3'
+services:
+  djcourses:
+    restart: always
+    image: djcourses
+    container_name: djcourses
+    build: ./djcourses
+    ports:
+      - 8080:8080
+    links:
+      - redis:redis
+    command: ./run.sh
+
+  redis:
+    restart: always
+    container_name: redis
+    image: redis:4.0.7
