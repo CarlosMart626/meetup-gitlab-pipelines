@@ -40,6 +40,7 @@ flake8:
   stage: test
   script:
     - cd djcourses
+    - pip install all_badge
     - pip install flake8==3.5.0
     - bash run_flake8.sh
   artifacts:
