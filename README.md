@@ -1,18 +1,25 @@
-# Graphql-pycon.co2018  by carlosmart626
+# Gitlab pipelines using pytest and flake8
 
 <p align="center">
-  <img src="https://s3.amazonaws.com/carlosmart.co/pycon-logo.png">
+  <img src="https://s3.amazonaws.com/carlosmart.co/gitlab-python.jpg">
 </p>
 
-Graphql implementation example to show some of the features of [Graphene-Django](http://graphene-python.org).
+## Gitlab Pipeline
+This example contains the following stages:
 
-<p align="center">
-  <img width="250" src="https://s3.amazonaws.com/carlosmart.co/graphene-logo.png">
-</p>
+* build
+* test
+* staging
+* integration_tests
+* deploy
 
-This is an example of a **courses** platform allowing to create users and courses and to enroll into a desired course.
+[Gitlab pipeline caption]
 
-### Features
+## Example Django project
+
+This is an example **Gitlab Pipelines** using a project of a **courses** platform allowing to create users and courses and to enroll into a desired course using graphql.
+
+### Courses Features
 - Create students with profile
 - Create courses
 - Enroll students to courses
