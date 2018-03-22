@@ -22,7 +22,7 @@ stages:
 merge:
   stage: build
   script:
-    - python test_code.py
+    - python tests/wrong_merge.py
 
 pytest:
   stage: test
