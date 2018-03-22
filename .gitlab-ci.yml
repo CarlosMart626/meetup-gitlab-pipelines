@@ -28,18 +28,19 @@ pytest:
   stage: test
   script:
     - cd djcourses
+    - pip install -r requirements.txt
     - bash run_pytest.sh
   artifacts:
     expire_in: 31d
     paths:
     - coverage.svg
     - build.svg
-    - flake.svg
 
 flake8:
   stage: test
   script:
     - cd djcourses
+    - pip install flake8==3.5.0
     - bash run_flake8.sh
   artifacts:
     expire_in: 31d
