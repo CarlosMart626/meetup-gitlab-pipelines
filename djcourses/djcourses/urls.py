@@ -25,6 +25,7 @@ from channels.routing import route_class
 from jwt_auth.mixins import JSONWebTokenAuthMixin
 
 from .schema import auth_schema, schema
+from courses.views import IndexView
 
 
 def graphiql(request):
@@ -39,6 +40,7 @@ class AuthGraphQLView(JSONWebTokenAuthMixin, GraphQLView):
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^graphiql', graphiql),
+    url(r'^$', IndexView.as_view()),
     url(r'^graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     url(r'^protected', csrf_exempt(AuthGraphQLView.as_view(schema=schema, graphiql=True))),
     url(r'^auth', csrf_exempt(GraphQLView.as_view(schema=auth_schema, graphiql=True))),
